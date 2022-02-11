@@ -13,6 +13,11 @@ import fastClick from 'fastclick'
 import '@/assets/styles/iconfont.css'
 // 我的全局样式变量引入
 import '@/assets/styles/variables.css'
+// 引入轮播
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.min.css'
+
+Vue.use(VueAwesomeSwiper)
 
 //  加入快速点击
 fastClick.attach(document.body)
