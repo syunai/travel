@@ -9,6 +9,10 @@ import '@/assets/styles/reset.css'
 import '@/assets/styles/border.css'
 // 解决移动端点击可能会出现延迟的问题
 import fastClick from 'fastclick'
+// 全局引入图标字体样式
+import '@/assets/styles/iconfont.css'
+// 我的全局样式变量引入
+import '@/assets/styles/variables.css'
 
 //  加入快速点击
 fastClick.attach(document.body)
