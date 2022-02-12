@@ -16,6 +16,8 @@ import '@/assets/styles/variables.css'
 // 引入轮播
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.min.css'
+// 引入mixin css
+import '@/assets/styles/mixin.css'
 
 Vue.use(VueAwesomeSwiper)
 
