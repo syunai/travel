@@ -7,10 +7,13 @@
       <span class="iconfont">&#xe632;</span>
       输入城市/景点/游玩主题
     </div>
-    <div class="header-right">
-      {{this.city}}
-      <span class="iconfont arrow-icon">&#xe600;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{this.city}}
+        <span class="iconfont arrow-icon">&#xe600;</span>
+      </div>
+    </router-link>
+
   </div>
 </template>
 <script>
@@ -28,7 +31,7 @@ export default {
 
   background: var(--themeColor);
 
-  line-height: 0.86rem;
+  line-height: var(--HeaderHeight);
 
   color: #fff;
 }
@@ -51,7 +54,7 @@ export default {
 }
 .header-right {
   width: 1.24rem;
-
+  color: #fff;
   text-align: center;
 }
 
