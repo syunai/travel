@@ -52,11 +52,11 @@ export default {
           imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/a9d33792bd961b1692638d86cf3e6b83.png',
           desc: '滑雪'
         },
-        {
-          id: '0006',
-          imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/a9d33792bd961b1692638d86cf3e6b83.png',
-          desc: '滑雪fsaffafsadfsdfasdfasdf'
-        },
+        // {
+        //   id: '0006',
+        //   imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/a9d33792bd961b1692638d86cf3e6b83.png',
+        //   desc: '滑雪fsaffafsadfsdfasdfasdf'
+        // },
         {
           id: '0007',
           imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/a9d33792bd961b1692638d86cf3e6b83.png',
@@ -98,6 +98,7 @@ export default {
   height: 0;
   padding-bottom: 50%;
   overflow: hidden;
+  margin-top: .1rem;
 }
 .icon {
   width: 25%;
