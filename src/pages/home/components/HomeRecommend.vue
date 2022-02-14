@@ -4,13 +4,13 @@
   <ul>
     <li
       class="item border-bottom"
-      v-for="recommendItem of recommendList"
-      :key="recommendItem.id"
+      v-for="item of list"
+      :key="item.id"
     >
-      <img class="item-img" :src="recommendItem.imgUrl"/>
+      <img class="item-img" :src="item.imgUrl"/>
       <div class="item-info">
-        <p class="item-title ellipsis">{{recommendItem.title}}</p>
-        <p class="item-desc ellipsis">{{recommendItem.desc}}</p>
+        <p class="item-title ellipsis">{{item.title}}</p>
+        <p class="item-desc ellipsis">{{item.desc}}</p>
         <button class="item-button">查看详情</button>
       </div>
     </li>
@@ -22,28 +22,12 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/2101/c1/c1d3c7a78d2cfef3a3.img.png_250x250_220b3378.png',
-          title: '热市云顶温泉旅游度假区',
-          desc: '热市云顶温泉旅游度假区热市云顶温泉旅游度假区热市云顶温泉旅游度假区热市云顶温泉旅游度假区'
-        },
-        {
-          id: '0002',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/2101/c1/c1d3c7a78d2cfef3a3.img.png_250x250_220b3378.png',
-          title: '热市云顶温泉旅游度假区',
-          desc: '热市云顶温泉旅游度假区热市云顶温泉旅游度假区热市云顶温泉旅游度假区热市云顶温泉旅游度假区'
-        },
-        {
-          id: '0003',
-          imgUrl: 'https://imgs.qunarzz.com/sight/p0/2101/c1/c1d3c7a78d2cfef3a3.img.png_250x250_220b3378.png',
-          title: '热市云顶温泉旅游度假区',
-          desc: '热市云顶温泉旅游度假区热市云顶温泉旅游度假区热市云顶温泉旅游度假区热市云顶温泉旅游度假区'
-        }
-      ]
+
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper v-if="showIcon" :options="swiperOptions">
       <swiper-slide
         v-for="(iconList,index) of pages"
         :key = "index"
@@ -24,61 +24,20 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
     return {
-      iconList: [
-        {
-          id: '0001',
-          imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/a9d33792bd961b1692638d86cf3e6b83.png',
-          desc: '滑雪'
-        },
-        {
-          id: '0002',
-          imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/a9d33792bd961b1692638d86cf3e6b83.png',
-          desc: '滑雪'
-        },
-        {
-          id: '0003',
-          imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/a9d33792bd961b1692638d86cf3e6b83.png',
-          desc: '滑雪'
-        },
-        {
-          id: '0004',
-          imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/a9d33792bd961b1692638d86cf3e6b83.png',
-          desc: '滑雪'
-        },
-        {
-          id: '0005',
-          imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/a9d33792bd961b1692638d86cf3e6b83.png',
-          desc: '滑雪'
-        },
-        // {
-        //   id: '0006',
-        //   imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/a9d33792bd961b1692638d86cf3e6b83.png',
-        //   desc: '滑雪fsaffafsadfsdfasdfasdf'
-        // },
-        {
-          id: '0007',
-          imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/a9d33792bd961b1692638d86cf3e6b83.png',
-          desc: '滑雪'
-        },
-        {
-          id: '0008',
-          imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/a9d33792bd961b1692638d86cf3e6b83.png',
-          desc: '滑雪'
-        },
-        {
-          id: '0009',
-          imgUrl: 'https://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20209/a9d33792bd961b1692638d86cf3e6b83.png',
-          desc: '滑雪'
-        }
-      ]
+      swiperOptions: {
+        autoplay: false
+      }
     }
   },
   computed: {
     pages () {
       let pages = []
-      this.iconList.forEach((value, index) => {
+      this.list.forEach((value, index) => {
         const pageIndex = Math.floor(index / 8)
 
         if (!pages[pageIndex]) {
@@ -87,6 +46,9 @@ export default {
         pages[pageIndex].push(value)
       })
       return pages
+    },
+    showIcon () {
+      return this.pages.length > 0
     }
   }
 }
