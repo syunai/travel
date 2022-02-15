@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-
-    <router-view/>
+    <!-- keep-alive 可以从内存中拿数据不用每次都重新渲染获取数据 -->
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
