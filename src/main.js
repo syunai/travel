@@ -18,6 +18,8 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.min.css'
 // 引入mixin css
 import '@/assets/styles/mixin.css'
+// 引入使用vuex构造的sotre
+import store from '@/store'
 
 Vue.use(VueAwesomeSwiper)
 
@@ -30,6 +32,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
