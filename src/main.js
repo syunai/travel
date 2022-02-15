@@ -7,8 +7,9 @@ import router from './router'
 import '@/assets/styles/reset.css'
 // 1像素边框解决样式
 import '@/assets/styles/border.css'
-// 解决移动端点击可能会出现延迟的问题
-import fastClick from 'fastclick'
+// 解决移动端点击可能会出现延迟的问题   使用了另外的方法，实在html中加入一个属性解决的在reset.css中touch-action: manipulation;
+// import fastClick from 'fastclick'
+
 // 全局引入图标字体样式
 import '@/assets/styles/iconfont.css'
 // 我的全局样式变量引入
@@ -24,7 +25,7 @@ import store from '@/store'
 Vue.use(VueAwesomeSwiper)
 
 //  加入快速点击
-fastClick.attach(document.body)
+// fastClick.attach(document.body)
 
 Vue.config.productionTip = false
 
