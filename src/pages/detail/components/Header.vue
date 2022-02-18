@@ -27,8 +27,13 @@ export default {
       }
     }
   },
+  // 页面展示时
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  // 页面消失时
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleScroll () {
