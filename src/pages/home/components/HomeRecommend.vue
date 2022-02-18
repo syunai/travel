@@ -2,7 +2,10 @@
 <div>
   <div class="recommend-title">热门推荐</div>
   <ul>
-    <li
+    <!-- 就上tag后router-link就被渲染成li标签，而不是a -->
+    <router-link
+      tag="li"
+      :to="'/detail/' + item.id"
       class="item border-bottom"
       v-for="item of list"
       :key="item.id"
@@ -13,7 +16,7 @@
         <p class="item-desc ellipsis">{{item.desc}}</p>
         <button class="item-button">查看详情</button>
       </div>
-    </li>
+    </router-link>
   </ul>
 </div>
 
