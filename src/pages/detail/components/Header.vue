@@ -26,17 +26,28 @@ export default {
       }
     }
   },
+  // activated 与 deactivated 只有在keepalive管理的组件才有这个生命周期函数
   // 页面展示时
-  activated () {
+  // activated () {
+  //   window.addEventListener('scroll', this.handleScroll)
+  // },
+  // // 页面消失时
+  // deactivated () {
+  //   window.removeEventListener('scroll', this.handleScroll)
+  // },
+  mounted () {
     window.addEventListener('scroll', this.handleScroll)
   },
   // 页面消失时
-  deactivated () {
+  destroyed () {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
     handleScroll () {
-      const top = document.documentElement.scrollTop
+      const top = document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      window.pageYOffset
+
       if (top > 60) {
         let opacity = top / 140
         opacity = opacity > 1 ? 1 : opacity
