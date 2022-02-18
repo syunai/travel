@@ -9,7 +9,6 @@
       </router-link>
       景点详情
     </div>
-    <div class="content"></div>
   </div>
 </template>
 
@@ -53,9 +52,6 @@ export default {
 
 <style scoped>
 
-.content {
-  height: 50rem;
-}
 .header-abs {
   position: absolute;
   left: .2rem;
@@ -80,6 +76,7 @@ export default {
   background: var(--themeColor);
   font-size: .32rem;
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   right: 0;
