@@ -53,6 +53,9 @@ export default {
   computed: {
     ...mapState(['city'])
   },
+  activated () {
+    this.scroll.refresh()
+  },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper, {
       click: true

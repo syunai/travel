@@ -21,6 +21,7 @@ import 'swiper/dist/css/swiper.min.css'
 import '@/assets/styles/mixin.css'
 // 引入使用vuex构造的sotre
 import store from '@/store'
+import 'babel-polyfill'
 
 Vue.use(VueAwesomeSwiper)
 

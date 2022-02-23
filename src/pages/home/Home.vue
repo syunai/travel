@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import HomeHeader from './components/HomeHeader'
+// import HomeHeader from './components/HomeHeader'
 import HomeSwiper from './components/HomeSwiper'
 import HomeIcons from './components/HomeIcons'
 import HomeRecommend from './components/HomeRecommend'
@@ -20,7 +20,7 @@ import {mapState} from 'vuex'
 export default {
   name: 'Home',
   components: {
-    HomeHeader,
+    HomeHeader: () => import('./components/HomeHeader'),
     HomeSwiper,
     HomeIcons,
     HomeRecommend,

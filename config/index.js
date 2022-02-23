@@ -57,6 +57,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
+    // 这个是打包后的文件所在目录，如果你准备把打包后的文件放入一个命名的文件夹中，就要在这里指定路径
     assetsPublicPath: '/',
 
     /**
